@@ -1,20 +1,27 @@
 package institution.interlink;
 
+import java.util.ArrayList;
 import person.Student;
 
 public class Internship {
+    private String name;
+    private final int MINSCORE = 75;
+    private ArrayList<Student> enrolledStudents = new ArrayList<Student>();
     public Internship(String name) {
-        //TODO: Implementation is needed
         this.name = name;
     }
 
     public void setStudent(Student student) {
-
-        //TODO: Implementation is needed
+        if(student.getKnowledge().getLevel() > MINSCORE && student!= null) {
+            enrolledStudents.add(student);
+        }
     }
 
-    public String getStudents() {
-        //TODO: Implementation is needed
-        return "Andrew Maslenko\nJulia Veselkina\n";
+    public void getStudents() {
+        for(Student student : this.enrolledStudents) {
+            System.out.println(student.getName());
+        }
     }
+
+
 }

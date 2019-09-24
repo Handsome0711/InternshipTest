@@ -12,17 +12,14 @@ public class University {
     Random rand = new Random();
 
     public University(String name) {
-        //TODO: Implementation is needed
         this.name = name;
     }
 
-    public void setStudent(Student student) {
-        //TODO: Implementation is needed
-
+    public ArrayList<Student> getUniversityStudents(){
+        return universityStudents;
     }
 
     public void addStudent(Student student) {
-        //TODO: Implementation is needed
         universityStudents.add(student);
     }
 
@@ -31,4 +28,6 @@ public class University {
             student.setKnowledge(new Knowledge(rand.nextInt()%100));
         }
     }
+
+
 }
