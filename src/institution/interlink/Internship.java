@@ -5,9 +5,11 @@ import person.Student;
 public class Internship {
     public Internship(String name) {
         //TODO: Implementation is needed
+        this.name = name;
     }
 
     public void setStudent(Student student) {
+
         //TODO: Implementation is needed
     }
 
